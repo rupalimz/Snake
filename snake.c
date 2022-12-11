@@ -5,13 +5,11 @@ int hight=20,width=20,x,y,fruitx,fruity,flag,gameend,score;
 void makelogic()
 {
     switch(flag)
-
     {
     case 1:
     {
         x--;
         break;
-
     }
     case 2:
     {
@@ -74,24 +72,25 @@ void makelogic()
     }
 }
 void setup(){
-    x=hight/2;
-    y=width/2;
-    label1:
-    fruitx=rand()%20;
-    if(fruitx == 0)
-    goto label1;
+                x=hight/2;
+                y=width/2;
 
-label2:
-    fruity=rand()%20;
-    if(fruity == 0)
-    goto label2;
-    gameend=0;
-    score=0;
+            label1:
+                fruitx=rand()%20;
+                if(fruitx == 0)
+                goto label1;
+
+            label2:
+                fruity=rand()%20;
+                if(fruity == 0)
+                goto label2;
+                gameend=0;
+                score=0;
 }
 
 void draw()
 {
-    system("cls");//altarnative of clrscr();
+    system("cls");//alternative of clrscr();
     int i,j;
     for(i=0;i<=hight;i++)
     {
@@ -126,10 +125,11 @@ void draw()
 int main()
 {
     setup();
-    while(gameend!=1)
-    {
-        input();
-        draw();
-        makelogic();
-    }
+    draw();
+    // while(gameend!=1)
+    // {
+    //     input();
+    //     draw();
+    //     makelogic();
+    // }
 }
